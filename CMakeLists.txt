@@ -5,19 +5,10 @@ cmake_minimum_required(VERSION 3.1)
 project(EAStdC CXX)
 
 #-------------------------------------------------------------------------------------------
-# Options
-#-------------------------------------------------------------------------------------------
-option(EASTDC_BUILD_TESTS "Enable generation of build files for tests" OFF)
-
-#-------------------------------------------------------------------------------------------
 # Library definition
 #-------------------------------------------------------------------------------------------
 file(GLOB EASTDC_SOURCES "source/*.cpp")
 add_library(EAStdC ${EASTDC_SOURCES})
-
-if(EASTDC_BUILD_TESTS)
-    add_subdirectory(test)
-endif()
 
 #-------------------------------------------------------------------------------------------
 # Defines
